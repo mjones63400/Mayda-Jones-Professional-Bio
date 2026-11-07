@@ -1,0 +1,510 @@
+/* =====================================
+   1. GENERAL PAGE SETTINGS
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F7F3ED;
+    color: #41464D;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   2. HORIZONTAL NAVIGATION BAR
+===================================== */
+
+.navbar {
+    background-color: #17324D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 22px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #34516B;
+    border-radius: 5px;
+}
+
+
+/* =====================================
+   3. DROPDOWN MENUS
+===================================== */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #17324D;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #F0E5E1;
+    color: #17324D;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+
+/* =====================================
+   4. RESUME DOWNLOAD BUTTON
+===================================== */
+
+.resume-button {
+    background-color: #C69D96;
+    color: #FFFFFF !important;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 13px 22px !important;
+}
+
+.resume-button:hover {
+    background-color: #A77C76;
+}
+
+
+/* =====================================
+   5. MAIN PAGE TITLE
+===================================== */
+
+h1 {
+    text-align: center;
+    color: #17324D;
+    font-size: 38px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+/* =====================================
+   6. MAIN BODY CONTAINER
+===================================== */
+
+.main-body {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* =====================================
+   7. PROFESSIONAL CONTENT SECTIONS
+===================================== */
+
+.main-body>div {
+    background-color: #FFFFFF;
+    padding: 35px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E8E2DC;
+}
+
+
+/* =====================================
+   8. FIRST ABOUT SECTION / INTRODUCTION
+===================================== */
+
+.main-body>.About:first-child {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr;
+    gap: 35px;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-top: 5px solid #C69D96;
+}
+
+.main-body>.About:first-child img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    justify-self: center;
+}
+
+
+/* =====================================
+   9. SECTION HEADINGS
+===================================== */
+
+h2 {
+    color: #17324D;
+    font-size: 25px;
+    margin-top: 0;
+    border-bottom: 2px solid #D9B8B0;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #34516B;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+
+/* =====================================
+   10. PARAGRAPHS AND LISTS
+===================================== */
+
+p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   11. SECTION IMAGES
+===================================== */
+
+.main-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   12. CAREER CHART
+===================================== */
+
+.Carrer.Chart {
+    background-color: #F0E5E1;
+    text-align: center;
+    padding: 40px;
+}
+
+
+/* =====================================
+   13. CONTACT SECTION
+===================================== */
+
+.main-body>div:last-child {
+    border-left: 5px solid #C69D96;
+}
+
+
+/* =====================================
+   14. FOOTER
+===================================== */
+
+footer {
+    background-color: #17324D;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =====================================
+   15. MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar>a,
+    .dropdown>a {
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+
+    .resume-button {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .main-body {
+        padding: 12px;
+    }
+
+    .main-body>div {
+        padding: 22px;
+    }
+
+    .main-body>.About:first-child {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .main-body>.About:first-child img {
+        max-width: 250px;
+    }
+}
+
+
+/* =========================================
+   FRONT PAGE PORTRAIT
+========================================= */
+
+.front-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px 20px 45px;
+    background-color: #F7F3ED;
+}
+
+.front-page-image {
+    display: block;
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 5px 20px rgba(23, 50, 77, 0.18);
+    margin: 0 auto 20px;
+}
+
+/* LINKEDIN AND EMAIL BUTTONS */
+
+.front-page-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.linkedin-button {
+    background-color: #17324D;
+    color: #FFFFFF;
+}
+
+.linkedin-button:hover {
+    background-color: #34516B;
+}
+
+.email-button {
+    background-color: #C69D96;
+    color: #FFFFFF;
+}
+
+.email-button:hover {
+    background-color: #A77C76;
+}
+
+
+/* =========================================
+   ABOUT ME TWO-COLUMN LAYOUT
+========================================= */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr;
+    align-items: center;
+    gap: 45px;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 25px auto;
+    background-color: #FFFFFF;
+    border-top: 5px solid #C69D96;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(23, 50, 77, 0.08);
+}
+
+/* ABOUT IMAGE */
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* ABOUT TEXT */
+
+.about-text {
+    text-align: left;
+}
+
+.about-text h2 {
+    color: #17324D;
+    font-size: 28px;
+    border-bottom: 2px solid #D9B8B0;
+    padding-bottom: 12px;
+    margin-top: 0;
+}
+
+.about-text p {
+    color: #41464D;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE LAYOUT
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .front-page-image {
+        width: 230px;
+        height: 290px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .about-image img {
+        max-width: 250px;
+        height: 420px;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
+
+    .front-page-links {
+        gap: 10px;
+    }
+}
+
+
+/* =====================================
+   FIX SPACE BELOW MAIN HEADING
+===================================== */
+
+h1 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+}
+
+/* MOVE PHOTO CLOSER TO HEADING */
+
+.front-page {
+    padding-top: 5px;
+    padding-bottom: 40px;
+    margin-top: 0;
+}
+
+/* =====================================
+   MAKE FRONT PAGE PHOTO BIGGER
+===================================== */
+
+.front-page-image {
+    width: 380px;
+    max-width: 90%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center top;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+/* MOBILE PHOTO SIZE */
+
+@media screen and (max-width: 700px) {
+
+    .front-page-image {
+        width: 300px;
+        max-width: 90%;
+        height: 370px;
+    }
+
+}
